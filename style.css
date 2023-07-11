@@ -128,6 +128,7 @@ li {
   font-weight: 700;
   letter-spacing: 3.2px;
   padding: 45px 0 29px;
+  text-transform: uppercase;
 }
 .banner__text p {
   font-size: 16px;
