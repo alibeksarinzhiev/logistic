@@ -12,6 +12,11 @@ $roboto: 'Roboto', sans-serif;
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  font-family: roboto;
+  font-size: 14px;
+  font-weight: 400;
+}
 .container{
   width: 1200px;
   margin: 0 auto;
@@ -21,12 +26,13 @@ li{
 }
 .header{
   &__top{
-    height: 45px;
     background: $khaki;
     font-family: $roboto;
     ul{
       display: flex;
+      height: 45px;
       justify-content: space-between;
+      align-items: center;
       li{
         font-weight: 400;
         font-size: 12px;
@@ -37,7 +43,6 @@ li{
     }
   }
   &__bottom{
-    height: 101px;
     background: $black;
     .container{
       display: flex;
@@ -48,12 +53,69 @@ li{
           display: flex;
           align-items: center;
         }
-      }
-      .nav{
-        p{
+        .logo{
+          padding-right: 11px;
+        }
+        .comp-title{
+          padding-right: 30px;
+        }
+        .vline{
+          margin-right: 29px;
+          height: 46px;
+          width: 1px;
+          background: #f2f2f2;
+        }
+        .location{
+          padding-right: 10px;
+        }
+        .our-offices{
           color: #fff;
         }
       }
+      .nav{
+        height: 101px;
+        ul{
+          height: 100%;
+          display: grid;
+          grid-template-columns: repeat(4,1fr);
+          gap: 30px;
+          align-items: center;
+        }
+        p{
+          color: #fff;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+.banner{
+  color: #fff;
+  .container{
+    padding: 155px 500px 220px;
+  }
+  &__text{
+    width: 920px;
+    height: 245px;
+    margin: 0 auto;
+    border: 1px solid #C8A35F;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    h1{
+      font-size: 64px;
+      font-weight: 700;
+      letter-spacing: 3.2px;
+      padding: 45px 0 29px;
+    }
+    p{
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 158.203%;
+      margin: 0 72px 45px;
+      text-align: center;
+      padding: 0 25px;
     }
   }
 }
@@ -86,6 +148,9 @@ li{
     }
     p{
       margin: 30px 0 50px;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 158.203%;
     }
     button{
       width: 220px;
@@ -137,8 +202,8 @@ li{
   }
   &__card{
     width: 25%;
-padding: 40px 0 40px;
-  background: $grey;
+    padding: 40px 0 40px;
+    background: $grey;
     border: 1px solid $black;
     display: flex;
     align-items: center;
@@ -146,7 +211,7 @@ padding: 40px 0 40px;
     color: white;
     text-transform: uppercase;
     flex-direction: column;
-height: 180px;
+    height: 180px;
     row-gap: 35px;
   }
   &__card.first{
